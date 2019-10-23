@@ -6,15 +6,21 @@ import { AppComponent } from './app.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeGetComponent } from './components/employee/employee-get/employee-get.component';
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { EmployeeService } from './core/services/employee.service';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTableModule } from '@angular/material/table';
+import { MaterialModule } from './modules/material/material.module';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -22,7 +28,9 @@ import { EmployeeService } from './core/services/employee.service';
     AppComponent,
     EmployeeAddComponent,
     EmployeeGetComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    EmployeesComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +42,12 @@ import { EmployeeService } from './core/services/employee.service';
     ReactiveFormsModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatTableModule,
+    MaterialModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [ EmployeeService ],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
