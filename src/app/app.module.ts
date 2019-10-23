@@ -14,13 +14,12 @@ import { MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { EmployeeService } from './core/services/employee.service';
-import { EmployeesComponent } from './components/employees/employees.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTableModule } from '@angular/material/table';
 import { MaterialModule } from './modules/material/material.module';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -29,7 +28,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     EmployeeAddComponent,
     EmployeeGetComponent,
     EmployeeEditComponent,
-    EmployeesComponent,
     DepartmentComponent
   ],
   imports: [
@@ -45,7 +43,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     HttpClientModule,
     MatTableModule,
     MaterialModule,
-    MDBBootstrapModule.forRoot()
+    // MDBBootstrapModule.forRoot()
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
